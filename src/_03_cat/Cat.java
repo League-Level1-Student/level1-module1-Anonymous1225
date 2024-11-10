@@ -20,16 +20,18 @@ package _03_cat;
 public class Cat {
 
 	private String name;
-	private int lives = 9;
-
+	private int lives = 9; 
 	Cat(String name) {
 		this.name = name;
+		System.out.println("Hi I am "+name+" the cat");
 	}
 
 	void meow() {
 		System.out.println("meeeeeooooooooooowwwwwwwww!!");
 	}
-
+	int getLifes() {
+		return lives;
+	}
 	public void printName() {
 		if (name == null)
 			System.out.println("i don't know my own name!");

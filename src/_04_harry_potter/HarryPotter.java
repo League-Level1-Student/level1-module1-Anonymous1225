@@ -24,6 +24,15 @@ public class HarryPotter {
 
 	void castSpell(String spell) {
 		System.out.println("casting spell: " + spell);
+		if(spell.equals("Avada Kedrava")) {
+		System.out.println("Harry is now a national criminal and he will forever live with the guilt of his actions");
+		}
+		if(spell.equals("crucio")) {
+			System.out.println("Harry has joined the MI6");
+		}
+		if(spell.equals("imperio")) {
+			System.out.println("Harry has raised an army of minions and has taken over the wizarding world");
+		}
 	}
 
 	void makeInvisible(boolean invisible) {

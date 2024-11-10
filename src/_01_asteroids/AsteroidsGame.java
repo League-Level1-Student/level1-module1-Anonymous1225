@@ -20,6 +20,7 @@ public class AsteroidsGame implements GameScene, ActionListener {
 	 * class does have any constructors java will use a default constructor
 	 */
 	Rocket rocket = new Rocket();
+	
 	/*
 	 * However if you tried running this you'll notice that we get a message popping
 	 * up saying you need to write a constructor. This is because if we let it run
@@ -43,6 +44,7 @@ public class AsteroidsGame implements GameScene, ActionListener {
 			JOptionPane.showMessageDialog(null, "Rocket.java needs a constructor");
 			System.exit(0);
 		}
+		
 		game.setScene(this);
 		game.addController(rocket);
 		game.start();
