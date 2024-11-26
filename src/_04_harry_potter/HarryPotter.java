@@ -24,7 +24,8 @@ public class HarryPotter {
 
 	void castSpell(String spell) {
 		System.out.println("casting spell: " + spell);
-		if(spell.equals("Avada Kedrava")) {
+		spell= spell.toLowerCase();
+		if(spell.equals("avada kedava")) {
 		System.out.println("Harry is now a national criminal and he will forever live with the guilt of his actions");
 		}
 		if(spell.equals("crucio")) {
@@ -32,6 +33,18 @@ public class HarryPotter {
 		}
 		if(spell.equals("imperio")) {
 			System.out.println("Harry has raised an army of minions and has taken over the wizarding world");
+		}
+		if(spell.equals("winguardium leviosa")) {
+			System.out.println("Harry went to hogsmeade and became a shoplifter");
+	}
+		if(spell.equals("lumos")) {
+			System.out.println("Harry has restarted the enlightment and accidentaly caused a french revolution in britain");
+		}
+		if(spell.equals("obliviate")) {
+			System.out.println("Harry has reversed the enlightment");
+		}
+		if(spell.equals("riddikulous")) {
+			System.out.println("Harry is now a literal clown");
 		}
 	}
 

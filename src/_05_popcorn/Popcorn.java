@@ -17,7 +17,8 @@ class Microwave {
 	private int cookTime;
 	Popcorn thingToBeCooked;
 
-	Microwave() {
+	Microwave(int cookTime, String thingToBeCooked) {
+		this.cookTime=cookTime;
 		System.out.println("Microwave says: a Microwave has been made.");
 	}
 
