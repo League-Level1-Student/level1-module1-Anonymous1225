@@ -23,7 +23,7 @@ class Microwave {
 	}
 
 	void putInMicrowave(Popcorn thingToBeCooked) {
-		System.out.println("Microwave says: popcorn put in microwave.");
+		System.out.println("Microwave says: pizza put in microwave.");
 		this.thingToBeCooked = thingToBeCooked;
 	}
 
@@ -46,34 +46,35 @@ class Microwave {
 
 public class Popcorn {
 
-	private int kernels = 20;
+	private int unBurnedChez = 12;
 	private String flavor;
-	private boolean isCooked = false;
+	private boolean isBurnt = false;
 
 	Popcorn(String flavor) {
 		this.flavor = flavor;
-		System.out.println("Popcorn says: making package of " + this.flavor + " popcorn.");
+		System.out.println("Microwaving " + this.flavor + " pizza.");
 	}
 
 	public void eat() {
-		if (isCooked) {
-			System.out.println("Popcorn says: Time to eat popcorn!");
-		} else {
-			System.out.println("Don't eat the popcorn. Not all the kernels have popped!");
+		if (unBurnedChez<9) {
+			System.out.println("Ready to eat!");
+		}
+		else {
+			System.out.println("It's to cold!");
 		}
 	}
 	
 	public void applyHeat() {
 		pause();
-
-		if (kernels == 0) {
-			isCooked = true;
-		} else {
-			System.out.println("POP!" + kernels);
-			kernels--;
+		unBurnedChez--;
+		if (unBurnedChez == 0) {
+			isBurnt = true;
+			System.out.println("Pizza is dead >:(!");
 		}
 	}
-
+	public boolean isburned() {
+		return isBurnt;
+	}
 	private void pause() {
 		try {
 			Thread.sleep(150);
