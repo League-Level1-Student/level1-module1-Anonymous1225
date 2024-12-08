@@ -16,6 +16,9 @@ public class Vault {
 	 * @param guess the code being attempted
 	 * @return true if the guess matches the code, false otherwise
 	 */
+	public int code() {
+		return secret;
+	}
 	public boolean tryCode(int guess) {
 		return guess == secret;
 	}
