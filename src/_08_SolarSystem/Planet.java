@@ -14,7 +14,7 @@ public class Planet {
     Color colour;
     int year;
     int dist;
-    public Planet(int diameterPixels, Color color, int year, int dist) {
+    public Planet(int diameterPixels, Color color, int year, int dist, int moons) {
         this.diameter=diameterPixels;
         this.colour=color;
         this.year=year;
