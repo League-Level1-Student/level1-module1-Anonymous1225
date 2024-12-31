@@ -116,7 +116,8 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
             checkHippoEating(Lizzie);
             checkHippoEating(Homer);
             checkHippoEating(Henry);
-            checkHippoEating(Harry);}
+            checkHippoEating(Harry);
+            }
     }
 
     @Override

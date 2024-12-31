@@ -31,6 +31,7 @@ public class TurfWar extends PApplet {
         	this.downKey=downKey;
         	this.leftKey=leftKey;
         	this.rightKey=rightKey;
+        	rect(x,y,20,40);
         }
         /*
          * The member variables below do not need to be initialized in the
@@ -47,7 +48,9 @@ public class TurfWar extends PApplet {
              * 2. Draw a rectangle to represent the the Player using its color,
              * coordinates and size.
              */
-            
+        	
+        	fill(255,0,0);
+            rect(30,30,20,20);
         }
 
         void update() {
@@ -66,10 +69,19 @@ public class TurfWar extends PApplet {
             /* 
              * 3. Make the Player move in every other direction.
              * 
+             * 
              * Note: You do not need to use the statsBoardLine for the 
              * other directions.
              */
-            
+            if (moveDown) {
+            	y+=speed;
+            }
+            if (moveLeft) {
+            	x-=speed;
+            }
+            if (moveRight) {
+            	x+=speed;
+            }
         }
 
         // You do not need to change any other Player methods.
@@ -119,8 +131,8 @@ public class TurfWar extends PApplet {
      * 4. Declare two variables of the Player class called player1 and player2.
      * Do not initialize them yet.
      */
-
-    
+    Player p1;
+    Player p2;
 
     // Do not change these variables
     boolean gameOver = false;
@@ -140,7 +152,8 @@ public class TurfWar extends PApplet {
     @Override
     public void settings() {
         // 5. Set the size for your sketch. Make it at least 300x300.
-       
+    	int z=600;
+        size(z,z);
     }
 
     @Override
@@ -152,11 +165,11 @@ public class TurfWar extends PApplet {
         ((java.awt.Canvas) surface.getNative()).requestFocus();
 
         // 6. Set the background color.
-
-
+        background(0,64,0);
         // 7. Call the noStroke Method.
-        
-        
+        noStroke();
+        p1= new Player(20,20,10,15,15,1,2,3,4);
+        p2= new Player(40,20,10,15,15,1,2,3,4);
         /*
          * 8. Initialize the two Player objects. For one use UP, LEFT, DOWN,
          * RIGHT for the keys, for the second use the W,A,S,D final int 
